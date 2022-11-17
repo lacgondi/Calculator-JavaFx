@@ -18,10 +18,12 @@ public class HelloController {
 
     @FXML
     private void initialize() {
-        SpinnerValueFactory.IntegerSpinnerValueFactory valueFactory =
+        SpinnerValueFactory.IntegerSpinnerValueFactory valueFactoryA =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, 5);
-        numberA.setValueFactory(valueFactory);
-        numberB.setValueFactory(valueFactory);
+        numberA.setValueFactory(valueFactoryA);
+        SpinnerValueFactory.IntegerSpinnerValueFactory valueFactoryB =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, 5);
+        numberB.setValueFactory(valueFactoryB);
     }
 
     public void plusButtonClick(ActionEvent actionEvent) {
