@@ -3,12 +3,11 @@ package com.example.calculator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.text.Text;
 
-public class HelloController {
+public class CalculatorController {
     @FXML
     public Text result;
     @FXML
