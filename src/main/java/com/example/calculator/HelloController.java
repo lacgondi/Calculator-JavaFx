@@ -27,70 +27,70 @@ public class HelloController {
     }
 
     public void plusButtonClick(ActionEvent actionEvent) {
-        if(numberA.getValue()!="" && numberB.getValue()!=""){
-            result.setText(String.valueOf(calculateResult("+",(Double) numberA.getValue(),(Double) numberB.getValue())));
-        }else{
+        if (numberA.getValue() != "" && numberB.getValue() != "") {
+            result.setText(String.valueOf(calculateResult("+", (Integer) numberA.getValue(), (Integer) numberB.getValue())));
+        } else {
             showAlert();
         }
     }
 
     public void minusButtonClick(ActionEvent actionEvent) {
-        if(numberA.getValue()!="" && numberB.getValue()!=""){
-            result.setText(String.valueOf(calculateResult("-",(Double) numberA.getValue(),(Double) numberB.getValue())));
-        }else{
+        if (numberA.getValue() != "" && numberB.getValue() != "") {
+            result.setText(String.valueOf(calculateResult("-", (Integer) numberA.getValue(), (Integer) numberB.getValue())));
+        } else {
             showAlert();
         }
     }
 
     public void timesButtonClick(ActionEvent actionEvent) {
-        if(numberA.getValue()!="" && numberB.getValue()!=""){
-            result.setText(String.valueOf(calculateResult("*",(Double) numberA.getValue(),(Double) numberB.getValue())));
-        }else{
+        if (numberA.getValue() != "" && numberB.getValue() != "") {
+            result.setText(String.valueOf(calculateResult("*", (Integer) numberA.getValue(), (Integer) numberB.getValue())));
+        } else {
             showAlert();
         }
     }
 
     public void divideButtonClick(ActionEvent actionEvent) {
-        if(numberA.getValue()!="" && numberB.getValue()!=""){
-            result.setText(String.valueOf(calculateResult("/",(Double) numberA.getValue(),(Double) numberB.getValue())));
-        }else{
+        if (numberA.getValue() != "" && numberB.getValue() != "") {
+            result.setText(String.valueOf(calculateResult("/", (Integer) numberA.getValue(), (Integer) numberB.getValue())));
+        } else {
             showAlert();
         }
     }
 
     public void moduloButtonClick(ActionEvent actionEvent) {
-        if(numberA.getValue()!="" && numberB.getValue()!=""){
-            result.setText(String.valueOf(calculateResult("%",(Double) numberA.getValue(),(Double) numberB.getValue())));
-        }else{
+        if (numberA.getValue() != "" && numberB.getValue() != "") {
+            result.setText(String.valueOf(calculateResult("%", (Integer) numberA.getValue(), (Integer) numberB.getValue())));
+        } else {
             showAlert();
         }
     }
 
-    private void showAlert(){
+    private void showAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setHeaderText("The number fields aren't filled");
         alert.setContentText("Fill the number fields to continue");
         alert.show();
     }
 
-    private double calculateResult(String operator, double operand1, double operand2){
+    private double calculateResult(String operator, int operand1, int operand2) {
         double result = 0;
 
-        switch (operator){
+        switch (operator) {
             case "+":
-                result = operand1+operand2;
+                result = (double) operand1 + (double) operand2;
                 break;
             case "-":
-                result = operand1- operand2;
+                result = (double) operand1 - (double) operand2;
                 break;
             case "*":
-                result = operand1 * operand2;
+                result = (double) operand1 * (double) operand2;
                 break;
             case "/":
-                result = operand1 / operand2;
+                result = (double) operand1 / (double) operand2;
                 break;
             case "%":
-                result = operand1 % operand2;
+                result = (double) operand1 % (double) operand2;
                 break;
         }
 
